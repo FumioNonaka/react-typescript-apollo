@@ -1,13 +1,15 @@
 import { VFC } from 'react';
 import { useCounter } from './useCounter';
+import { CounterButton } from './CounterButton';
+import { CountNumber } from './CountNumber';
 
 export const CounterDisplay: VFC = () => {
-	const { count, decrement, increment } = useCounter();
+	const { decrement, increment } = useCounter();
 	return (
 		<div>
-			<button onClick={decrement}>-</button>
-			<span>{count}</span>
-			<button onClick={increment}>+</button>
+			<CounterButton handleClick={decrement} text="-" />
+			<CountNumber />
+			<CounterButton handleClick={increment} text="+" />
 		</div>
 	);
 }
