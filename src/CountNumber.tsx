@@ -1,8 +1,7 @@
-import { useReactiveVar } from "@apollo/client";
-import { VFC } from "react";
-import { countVar } from "./useCounter";
+import { VFC } from 'react';
+import { useCounter } from './useCounter';
 
 export const CountNumber: VFC = () => {
-	const count = useReactiveVar(countVar);
+	const { count } = useCounter();
 	return <span>{count}</span>
 }

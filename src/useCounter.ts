@@ -7,5 +7,5 @@ export const useCounter = () => {
 	const setCount = useCallback((value: number) => countVar(value), [])
 	const decrement = () => setCount(count - 1);
 	const increment = () => setCount(count + 1);
-	return { decrement, increment };
+	return { count, decrement, increment };
 };
